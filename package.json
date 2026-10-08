@@ -1,0 +1,10 @@
+{
+  "name": "country-explorer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pure JavaScript REST Countries API client for Lab 6",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "test": "echo \"No automated tests for this simple static project.\""
+  }
+}

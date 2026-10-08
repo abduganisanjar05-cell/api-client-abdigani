@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Explorer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="page-header">
+        <p class="eyebrow">Open Library API</p>
+        <h1>Book Explorer</h1>
+        <p class="subtitle">
+          Explore books, search by title, and view details from a live public API.
+        </p>
+      </header>
+
+      <section class="search-panel" aria-label="Book search">
+        <form id="search-form" class="search-form">
+          <label class="sr-only" for="country-search">Search for a book</label>
+          <input
+            id="country-search"
+            type="text"
+            placeholder="Enter book title..."
+            aria-label="Book search"
+          />
+          <button type="submit">Search</button>
+        </form>
+      </section>
+
+      <div id="loading" class="loading" role="status" aria-live="polite">
+        Loading...
+      </div>
+
+      <div id="error" class="error" role="alert" aria-live="assertive"></div>
+
+      <section class="content-grid">
+        <div class="panel">
+          <h2>Books</h2>
+          <div id="countries" class="country-grid" aria-live="polite"></div>
+        </div>
+
+        <aside class="panel">
+          <h2>Book Details</h2>
+          <div id="country-details" class="details-box">
+            <p>Select a book to view details.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="panel parallel-panel">
+        <h2>Parallel API Results</h2>
+        <div id="parallel-results" class="parallel-results"></div>
+      </section>
+    </main>
+
+    <script src="src/app.js"></script>
+  </body>
+</html>
